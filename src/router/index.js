@@ -338,7 +338,7 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes
 })
-let noCheckPath = ["/", "/login", "/create_admin", "/forgotPwd","/shareTemp"]
+let noCheckPath = ["/", "/login", "/create_admin", "/forgotPwd", "/shareTemp"]
 router.beforeEach((to, from, next) => { //路由守卫
     if (!noCheckPath.includes(to.path)) { //判断路由是否为登录路径
         if (!store.state.token) { //是否含有token
